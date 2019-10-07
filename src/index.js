@@ -9,6 +9,18 @@ module.exports = function getTimeForEducation(
     knowsProgramming = true,
     config = {family: 4}
     ) {
-      return 0;
+      const basicH=500;
+      const jsH=800;
+      let resH=0;
+      let weeks=0;
+
+      knowsProgramming===true?resH=jsH:resH=basicH+jsH;
+      resH%config[focus]===0?weeks=resH/config[focus]:weeks=Math.floor(resH/config[focus])+1;
+
+      return weeks;
   };
+
+
+
+
   
